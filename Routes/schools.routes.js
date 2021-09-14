@@ -20,9 +20,11 @@ router.post("/",  async (req, res)=>{
         .then((schools)=>{
             const sameSchool = schools.filter((school)=> school.name === name)
     
-            if(sameSchool){ const sameCity = sameSchool.filter((school)=> school.address.city === city)
+            if(sameSchool){
+                const sameCity = sameSchool.filter((school)=> school.address.city === city)
 
-                if(sameCity){ errors.push({ validationError: "School name is already in this city" }) 
+                if(sameCity){
+                    errors.push({ validationError: "School name is already in this city" }) 
                     res.status(422).json(errors)
                 } else {
                     School.create({ name, address })
