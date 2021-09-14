@@ -5,15 +5,15 @@ const Student = require("../models/Student");
 const School = require("../models/School");
 
 // With promises
-router.post("/students", (req, res)=>{
-    const { firstName, lastName, age, registered, grades } = req.body;
+// router.post("/students", (req, res)=>{
+//     const { firstName, lastName, age, registered, grades } = req.body;
     
-    Student.create({ firstName, lastName, age, registered, grades })
-        .then((data)=>{ res.send(data) })
-        .catch((err)=>{ res.send(err) })
-});
+//     Student.create({ firstName, lastName, age, registered, grades })
+//         .then((data)=>{ res.send(data) })
+//         .catch((err)=>{ res.send(err) })
+// });
 
-Students.findByIdAndUpdate('123456', { firstName: 'Monica' })
+Student.findByIdAndUpdate('123456', { firstName: 'Monica' })
 
 // ALTERNATIVE ASYNC AWAIT (NOT A PROMISE) - to use when there are too many .then
 router.post("/", async (req, res)=>{
