@@ -1,3 +1,3 @@
 # Learning MongoDB
 
-Creating models and routesn learning Mongo.
+Creating models and routes, learning Mongo.
