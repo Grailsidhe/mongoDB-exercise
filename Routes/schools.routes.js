@@ -36,8 +36,10 @@ router.post("/",  async (req, res)=>{
                 .then((data)=>{ res.send(data) })
             }
         })
-        .catch((err)=>{ res.send(err) }
-            res.status(422).json(errors))
+        .catch((err)=>{ 
+            res.send(err) 
+            res.status(422).json(errors)
+        })
     }
 });
 
