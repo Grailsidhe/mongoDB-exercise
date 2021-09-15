@@ -13,7 +13,7 @@ router.post("/",  async (req, res)=>{
     !name || !country || !city || !street || !number
     ? errors.push({ validationError: "All fields must be filled" }) : errors;
     
-    !Number(number) ? errors.push({ validationError: "Address number is not a valid number" }) : errors;
+    !Number(number) ? errors.push({ validationError: "Address number is not a valid number" }) : number;
 
     if(!errors){
         School.find({})
