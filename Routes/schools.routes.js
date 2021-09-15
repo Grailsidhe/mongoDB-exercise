@@ -11,7 +11,7 @@ router.post("/",  async (req, res)=>{
     const errors =  []
 
     !name || !country || !city || !street || !number
-    ? errors.push({ validationError: "All fields must be filled" }) : errors;
+    ? errors.push({ validationError: "All fields must be filled" }) : name;
     
     !Number(number) ? errors.push({ validationError: "Address number is not a valid number" }) : number;
 
